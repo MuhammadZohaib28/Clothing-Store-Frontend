@@ -1,0 +1,53 @@
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: seagreen;
+  padding: 1rem;
+
+  .messageContainer {
+    .message {
+      font-size: 1.2rem;
+      color: bisque;
+    }
+  }
+
+  .emailContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .email {
+      padding: 0.5rem;
+      border-radius: 0.4rem;
+      width: 24.5rem;
+      border: none;
+      outline: none;
+    }
+
+    .emailbtn {
+      position: absolute;
+      right: 0;
+      padding: 0.55rem;
+      border-radius: 0.4rem;
+      outline: none;
+      border: none;
+      font-weight: 550;
+      background-color: seagreen;
+      color: bisque;
+      cursor: pointer;
+
+      &:hover{
+        background-color: green;
+      }
+    }
+  }
+
+  .socialmediaicons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+}

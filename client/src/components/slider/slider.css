@@ -1,0 +1,43 @@
+.slider .container .sliderimages {
+  height: 85vh;
+  width: 95vw;
+  margin: 2rem auto;
+  display: flex;
+  border-radius: 1rem;
+  border: 1px solid seagreen;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 2s ease;
+}
+.slider .buttons {
+  position: absolute;
+  top: 40rem;
+  left: 40rem;
+}
+.slider .buttons button {
+  background-color: seagreen;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 1.5rem;
+  background: none;
+}
+.slider .buttons button:hover {
+  background-color: seagreen;
+  color: #bbb;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+  font-size: 1.5rem;
+}
+.slider .buttons .slidericon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  padding: 0;
+}/*# sourceMappingURL=slider.css.map */

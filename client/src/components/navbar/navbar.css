@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  padding: 1rem;
+}
+.navbar .brandname {
+  text-decoration: none;
+  color: black;
+}
+.navbar .leftnav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  position: relative;
+}
+.navbar .leftnav .leftnavli {
+  text-decoration: none;
+  color: black;
+}
+.navbar .rightnav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  position: relative;
+}
+.navbar .rightnav .rightnavli {
+  text-decoration: none;
+  color: black;
+}
+.navbar .rightnav .rightnavli .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 3rem;
+  background-color: red;
+  right: 0.001rem;
+  bottom: 1.5rem;
+}
+.navbar .rightnav .rightnavli .icon {
+  height: 1.8rem;
+  aspect-ratio: 3/2;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: multiply;
+  position: relative;
+}/*# sourceMappingURL=navbar.css.map */

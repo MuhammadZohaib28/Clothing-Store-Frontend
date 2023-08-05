@@ -1,0 +1,197 @@
+.products {
+  margin: 0.5rem auto;
+  display: flex;
+  .right {
+    flex: 4;
+
+    .img{
+        height: 5%;
+        width: 100%;
+    }
+  }
+
+  .left {
+    position: sticky;
+    height: 100%;
+    top: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 1.5rem;
+    background-color: #f6f6f6;
+
+    .control {
+      font-family: arial;
+      display: block;
+      position: relative;
+      padding-left: 36px;
+      margin-bottom: 15px;
+      padding-top: 6px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    .control_indicator {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      height: 21px;
+      width: 22px;
+      background: #bfbfbf;
+      border: 1px solid #ffffff;
+      border-radius: 0px;
+    }
+    .control:hover input ~ .control_indicator,
+    .control input:focus ~ .control_indicator {
+      background: #cccccc;
+    }
+
+    .control input:checked ~ .control_indicator {
+      background: #23b44c;
+    }
+    .control:hover input:not([disabled]):checked ~ .control_indicator,
+    .control input:checked:focus ~ .control_indicator {
+      background: #66bc4e;
+    }
+    .control input:disabled ~ .control_indicator {
+      background: #e6e6e6;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .control_indicator:after {
+      box-sizing: unset;
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    .control input:checked ~ .control_indicator:after {
+      display: block;
+    }
+    .control-checkbox .control_indicator:after {
+      left: 8px;
+      top: 3px;
+      width: 3px;
+      height: 9px;
+      border: solid #ffffff;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+    .control-checkbox input:disabled ~ .control_indicator:after {
+      border-color: #7b7b7b;
+    }
+    .control-checkbox input + .control_indicator::before {
+      animation: s-ripple 250ms ease-out;
+    }
+    .control-checkbox input:checked + .control_indicator::before {
+      animation-name: s-ripple-dup;
+    }
+
+    .filterbyprice {
+      //   border: 1px solid red;
+      .range {
+        display: flex;
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        cursor: pointer;
+        width: 15rem;
+      }
+
+      /* Removes default focus */
+      input[type="range"]:focus {
+        outline: none;
+      }
+
+      /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+      /* slider track */
+      input[type="range"]::-webkit-slider-runnable-track {
+        background-color: #d5dfe2;
+        border-radius: 0.5rem;
+        height: 0.5rem;
+      }
+
+      /* slider thumb */
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        margin-top: -4px; /* Centers thumb on the track */
+        background-color: #299122;
+        border-radius: 0.5rem;
+        height: 1rem;
+        width: 1rem;
+      }
+
+      input[type="range"]:focus::-webkit-slider-thumb {
+        outline: 3px solid #299122;
+        outline-offset: 0.125rem;
+      }
+    }
+
+    .rradio {
+      font-family: arial;
+      display: block;
+      position: relative;
+      padding-left: 30px;
+      margin: 15px auto;
+      padding-top: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .rradio input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    .rradio_indicator {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: #e6e6e6;
+      border: 0px solid #000000;
+      border-radius: undefinedpx;
+    }
+    .rradio:hover input ~ .rradio_indicator,
+    .rradio input:focus ~ .rradio_indicator {
+      background: #cccccc;
+    }
+
+    .rradio input:checked ~ .rradio_indicator {
+      background: seagreen;
+    }
+    .rradio:hover input:not([disabled]):checked ~ .rradio_indicator,
+    .rradio input:checked:focus ~ .rradio_indicator {
+      background: seagreen;
+    }
+
+    .rradio_indicator:after {
+      box-sizing: unset;
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    .rradio input:checked ~ .rradio_indicator:after {
+      display: block;
+    }
+    .rradio-radio .rradio_indicator {
+      border-radius: 50%;
+    }
+    .rradio-radio .rradio_indicator:after {
+      left: 7px;
+      top: 7px;
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+  }
+}
